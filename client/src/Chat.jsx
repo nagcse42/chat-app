@@ -3,7 +3,6 @@ import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
-  useQuery,
   useSubscription,
   useMutation,
   gql
@@ -64,7 +63,7 @@ const Messages = ({ user }) => {
                 height: 50,
                 width: 50,
                 marginRight: "0.5rem",
-                border: "2px solid #e5e6ea",
+                border: "2px solid #48b4e0",
                 borderRadius: 25,
                 textAlign: "center",
                 fontSize: "18pt",
@@ -146,7 +145,9 @@ const Chat = () => {
             ></FormInput>
           </Col>
           <Col xs={2} style={{ padding: 0 }}>
-            <Button onClick={() => sentMessage()}>Send</Button>
+            <Button onClick={() => sentMessage()} style={{ width: "100%" }}>
+              Send
+            </Button>
           </Col>
         </Row>
       </Container>
